@@ -7,18 +7,7 @@ class Workflows(HttpUser):
     max_wait = 100
     host = 'https://api.nylas.com'
     def on_start(self):
-        self.ids = ['4elnl1b1jssttb645ah3rhiz2',
-        '15xxg66ddz7esluhqvp4wl36q',
-        '12baz9ln4p4pcjypxntgpeyua',
-        'bcrf1dj2ya7g8kqe0v15ofix3',
-        'brja5rxd4ztj2yptmhhrobmb6',
-        '8wjdwgs84bbywzm6hjs3ey16k',
-        '4c1bjzdocxn6h468j1kry1w01',
-        '5mpney5ayn8lvn2sl6v7pyflw',
-        '81qokya6594vku4cdg3gk5f5m',
-        '1lzf07umpkb5b99xq64ko5po7',
-        '5w8uhb06mfd7mh01ld8iwovqb']
-        self.calendar_id = '9oepadvf4mcm2cx07esugn0zu'
+        self.calendar_id = 'please enter a valid value here'
 
     @task
     def create_workflow(self):
@@ -26,7 +15,7 @@ class Workflows(HttpUser):
         now = int(datetime.now().timestamp())
         start_time = now + 62*60
         end_time = start_time + 30*60
-        token = "FZxwnZq22SsL1Z6HaXUUI1CRnnJ9Z7"
+        token = "please enter a valid token"
         jsonStr = self.payload(start_time, end_time)
         response = self.client.post(url="/workflows", json=jsonStr, headers={
             "Authorization": "Bearer {}".format(token),
